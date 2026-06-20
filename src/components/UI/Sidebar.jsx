@@ -11,10 +11,6 @@ import {
   Info, Filter, Home
 } from 'lucide-react';
 
-/**
- * Main Sidebar - Apple Maps-inspired navigation panel
- * Collapsible on mobile, always visible on desktop.
- */
 const Sidebar = () => {
   const { activeSection, setActiveSection } = useMapContext();
   const [expanded, setExpanded] = useState(true);
@@ -46,7 +42,6 @@ const Sidebar = () => {
             exit={{ x: -380, opacity: 0 }}
             transition={{ type: 'spring', damping: 25 }}
           >
-            {/* Brand header */}
             <div className="sidebar__header">
               <div className="sidebar__logo">
                 <div className="logo-mark">
@@ -59,7 +54,6 @@ const Sidebar = () => {
               </div>
             </div>
 
-            {/* Section nav - About / Map / Detail */}
             <div className="sidebar__section-nav">
               <button
                 className={`section-btn ${activeSection === 'about' ? 'active' : ''}`}
@@ -75,7 +69,6 @@ const Sidebar = () => {
               </button>
             </div>
 
-            {/* Tab navigation */}
             <div className="sidebar__tabs">
               {tabs.map(({ id, icon: Icon, label }) => (
                 <button
@@ -89,7 +82,6 @@ const Sidebar = () => {
               ))}
             </div>
 
-            {/* Tab content */}
             <div className="sidebar__content">
               <AnimatePresence mode="wait">
                 {activeTab === 'search' && <SearchBar key="search" />}
@@ -99,7 +91,6 @@ const Sidebar = () => {
               </AnimatePresence>
             </div>
 
-            {/* Privacy badge */}
             <div className="sidebar__footer">
               <div className="privacy-badge">
                 <Shield size={14} />
