@@ -15,9 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-  with:
-    node-version: 22  # Changed from 20 to 22
-    cache: npm
+        with:
+          node-version: 22  # ← Use 22 instead of 20
+          cache: npm
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
