@@ -1,0 +1,27 @@
+{
+  "name": "pak-map",
+  "version": "1.0.0",
+  "description": "Pak Map - Privacy-focused mapping application for Pakistan with Apple Maps-inspired UX",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx",
+    "format": "prettier --write src"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "framer-motion": "^11.3.0",
+    "lucide-react": "^0.408.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.1",
+    "eslint": "^9.6.0",
+    "prettier": "^3.3.2"
+  }
+}

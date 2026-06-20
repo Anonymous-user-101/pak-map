@@ -1,0 +1,152 @@
+/* Premium Animation Library */
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(10, 132, 255, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(10, 132, 255, 0.8); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Spinner */
+.spin { animation: rotate 1s linear infinite; }
+.search-loading { animation: rotate 1s linear infinite; }
+
+/* Map pin animations */
+.landmark-icon {
+  transition: transform 0.3s var(--md-motion-standard);
+}
+.landmark-icon:hover {
+  transform: scale(1.2) !important;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Security zone pulse */
+.security-zone--pulsing {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Map preview 3D */
+.map-preview-3d {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 40px auto;
+}
+
+.map-preview__surface {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 24px;
+  transform: rotateX(60deg) rotateZ(-15deg);
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+  box-shadow:
+    0 50px 100px rgba(10, 132, 255, 0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+.map-preview__layer {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.map-preview__pins {
+  position: absolute;
+  inset: 0;
+}
+
+.pin {
+  position: absolute;
+  background: var(--md-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: pulse 2s ease-in-out infinite;
+}
+.pin > * { transform: rotate(45deg); }
+
+.pin-1 { animation-delay: 0s; background: #0A84FF; }
+.pin-2 { animation-delay: 0.5s; background: #FF375F; }
+.pin-3 { animation-delay: 1s; background: #30D158; }
+
+.map-preview__shadow {
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
+  right: 10%;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.5), transparent);
+  filter: blur(20px);
+}
+
+/* Tech visual */
+.tech-visual {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-visual__orb {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #0A84FF 0%, #0051D5 100%);
+  border-radius: 50%;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.tech-visual__rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  position: absolute;
+  border: 1px solid rgba(10, 132, 255, 0.3);
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.ring-1 { width: 200px; height: 200px; animation-delay: 0s; }
+.ring-2 { width: 280px; height: 280px; animation-delay: 0.5s; }
+.ring-3 { width: 360px; height: 360px; animation-delay: 1s; }

@@ -1,0 +1,111 @@
+/* iOS 26.3 Glass Morphism System */
+:root {
+  --glass-bg: rgba(28, 28, 30, 0.72);
+  --glass-bg-light: rgba(255, 255, 255, 0.08);
+  --glass-bg-heavy: rgba(28, 28, 30, 0.88);
+  --glass-blur: saturate(180%) blur(30px);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--md-shape-corner-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-panel--floating {
+  position: absolute;
+  z-index: 1000;
+}
+
+.glass-panel--sidebar {
+  position: fixed;
+  top: 80px;
+  left: 16px;
+  bottom: 16px;
+  width: 360px;
+  z-index: 900;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.glass-panel--top {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 950;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: var(--md-shape-corner-xl);
+}
+
+.glass-panel--modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  max-width: 560px;
+  width: 90%;
+  padding: 24px;
+}
+
+.glass-panel--bottom {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 900;
+  padding: 16px;
+}
+
+.glass-button {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--md-shape-corner-md);
+  color: var(--md-on-surface);
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all var(--md-motion-duration-short) var(--md-motion-standard);
+}
+
+.glass-button:hover {
+  background: var(--glass-bg-light);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Glass effect for map controls */
+.layer-switcher {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 800;
+  padding: 12px;
+  min-width: 180px;
+}
+
+/* Privacy badge */
+.privacy-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(10, 132, 255, 0.15);
+  border: 1px solid rgba(10, 132, 255, 0.3);
+  border-radius: var(--md-shape-corner-md);
+  font-size: 12px;
+  color: var(--md-primary);
+  margin-top: auto;
+}
