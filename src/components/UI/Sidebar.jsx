@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMapContext } from '../../context/MapContext';
 import GlassPanel from './GlassPanel';
-import SearchBar from './SearchBar';
+import SearchBar from '../Navigation/SearchBar';
 import RoutePlanner from '../Navigation/RoutePlanner';
 import LandmarkFilter from '../Landmarks/LandmarkFilter';
 import SecurityFilter from './SecurityFilter';
