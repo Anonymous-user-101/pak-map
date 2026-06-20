@@ -10,7 +10,7 @@ export const MapProvider = ({ children }) => {
   const [center, setCenter] = useState(PAKISTAN_CENTER);
   const [zoom, setZoom] = useState(PAKISTAN_DEFAULT_ZOOM);
   const [activeLandmarks, setActiveLandmarks] = useState(
-    Object.keys(LANDMARK_DEFAULTS)
+    Object.keys(DEFAULT_LANDMARKS)
   );
   const [activeSecurityZones, setActiveSecurityZones] = useState(true);
   const [route, setRoute] = useState(null);
