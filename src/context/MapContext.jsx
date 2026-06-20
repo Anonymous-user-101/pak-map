@@ -1,23 +1,24 @@
 import React, { createContext, useContext, useState, useRef } from 'react';
 import { PAKISTAN_CENTER, PAKISTAN_DEFAULT_ZOOM } from '../config/pakistanBounds';
+import { DEFAULT_LANDMARKS } from '../config/landmarks';
 
 const MapContext = createContext(null);
 
 export const MapProvider = ({ children }) => {
   const mapRef = useRef(null);
 
-  const [activeLayer, setActiveLayer] = useState('osm'); // 'osm' | 'hybrid' | 'satellite'
+  const [activeLayer, setActiveLayer] = useState('osm');
   const [center, setCenter] = useState(PAKISTAN_CENTER);
   const [zoom, setZoom] = useState(PAKISTAN_DEFAULT_ZOOM);
   const [activeLandmarks, setActiveLandmarks] = useState(
-    Object.keys(DEFAULT_LANDMARKS)
+    [...new Set(DEFAULT_LANDMARKS.map(lm => lm.category))]
   );
   const [activeSecurityZones, setActiveSecurityZones] = useState(true);
   const [route, setRoute] = useState(null);
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
-  const [activeSection, setActiveSection] = useState('about'); // 'about' | 'map' | 'detail'
+  const [activeSection, setActiveSection] = useState('about');
 
   const value = {
     mapRef,
