@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
+  base: '/pak-map/', // ️ CRITICAL: Must match your GitHub repo name exactly
   plugins: [react()],
   resolve: {
     alias: {
@@ -10,8 +11,8 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext', // Optimized for flagship devices
-    sourcemap: false, // No source maps in production
+    target: 'esnext',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -22,7 +23,7 @@ export default defineConfig({
     },
   },
   server: {
-    host: true, // For local network testing
+    host: true,
     port: 3000,
   },
 });
