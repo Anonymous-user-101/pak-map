@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/pak-map/', // ️ CRITICAL: Must match your GitHub repo name exactly
+  base: '/pak-map/', // ⚠️ THIS LINE IS MANDATORY. DO NOT REMOVE IT.
   plugins: [react()],
   resolve: {
     alias: {

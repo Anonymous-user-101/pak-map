@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0A0A0A" />
-  <meta name="description" content="Pak Map - Privacy-focused, offline-capable mapping for Pakistan" />
-  <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline' 'unsafe-eval'; 
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-               font-src https://fonts.gstatic.com;
-               img-src 'self' data: https://tile.openstreetmap.org https://server.arcgisonline.com https://wayback.maptiles.arcgis.com; 
-               connect-src 'self' https://nominatim.openstreetmap.org https://router.project-osrm.org https://en.wikipedia.org https://wayback.maptiles.arcgis.com;" />
-  <title>Pak Map</title>
-  <link rel="preconnect" href="https://tile.openstreetmap.org" />
-  <link rel="preconnect" href="https://server.arcgisonline.com" />
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pak Map</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://server.arcgisonline.com https://wayback.maptiles.arcgis.com; connect-src 'self' https://nominatim.openstreetmap.org https://router.project-osrm.org https://en.wikipedia.org https://wayback.maptiles.arcgis.com;" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
