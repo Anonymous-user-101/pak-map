@@ -1,14 +1,12 @@
 {
   "name": "pak-map",
   "version": "1.0.0",
-  "description": "Pak Map - Privacy-focused mapping application for Pakistan with Apple Maps-inspired UX",
+  "description": "Pak Map - Privacy-focused mapping application for Pakistan",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint src --ext .js,.jsx",
-    "format": "prettier --write src"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
